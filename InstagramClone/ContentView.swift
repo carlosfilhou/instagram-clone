@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    
     var body: some View {
         
         //TELA PRETA ---
@@ -18,32 +21,47 @@ struct ContentView: View {
                 
                 ScrollView {
                     
+                    Spacer()
+                        .frame(height: 10)
+                    
                     HStack {
-                        Text("For you")
-                            .foregroundColor(.white)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .font(.system(size: 27))
-                        
-                        Spacer()
-                        
-                        Image(systemName: "heart")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .font(.system(size: 25))
-                            .padding(.trailing, 15)
-                        
-                        Image("messenger")
+                        Image("instaLogo")
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 30, height: 30)
+                            .frame(width: 130)
                             .foregroundColor(.white)
-                            .bold()
+                        
+                        Spacer()
+                        
+                        Button(action: {}) {
+                            Image("heart")
+                                .renderingMode(.template)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 26, height: 26)
+                                .foregroundColor(.white)
+                        }
+                        
+                        Spacer()
+                            .frame(width: 25)
+                        
+                        Button(action: {}) {
+                            Image("messenger")
+                                .renderingMode(.template)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 26, height: 26)
+                                .foregroundColor(.white)
+                        }
                         
                         
                     } // CABEÇALHO ---
-                    .padding(.leading, 5)
-                    .padding(.trailing, 20)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    
+                    Spacer()
+                        .frame(height: 15)
                     
                     //STORIES ---
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -57,22 +75,22 @@ struct ContentView: View {
                                     Image("storyRing")
                                         .renderingMode(.template)
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                         .foregroundColor(.gray)
                                     
                                     Image("me")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
-                                    .cornerRadius(300)
+                                        .frame(width: 75, height: 75)
+                                        .cornerRadius(300)
                                 }
                                 
                                 Text("Your story")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.gray)
                                     .font(.caption)
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -80,22 +98,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("joao")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("jon1.santos")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -103,22 +121,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("mirte")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
-                                Text("myrtillejasmijn")
-                                    .font(.system(size: 14))
+                                Text("myrtillejasm...")
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -126,22 +144,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("yuri")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("jamalkmg")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -149,22 +167,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("gabriel")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("gabrieldosan")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -172,22 +190,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("rafael")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("rafaelmora...")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -195,22 +213,22 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("kayo")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("kayogoncalv...")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                             VStack {
                                 
@@ -218,31 +236,124 @@ struct ContentView: View {
                                     
                                     Image("storyRing")
                                         .resizable()
-                                        .frame(width: 95, height: 95)
+                                        .frame(width: 87, height: 87)
                                     
                                     Image("matheus")
                                         .resizable()
-                                        .frame(width: 80, height: 80)
+                                        .frame(width: 75, height: 75)
                                         .cornerRadius(300)
                                 }
                                 
                                 Text("matheushpd...")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: 13))
                                     .foregroundColor(.white)
                                     .font(.caption)
                                 
                             }
                             
-                            .padding(.trailing, 7)
+                            .padding(.trailing, 5)
                             
                         }
                         
                     } //STORIES ---
-                    .padding(.bottom, 5)
                     
-                    //LINHA FINA ---
+                    Spacer()
+                        .frame(height: 10)
+                    
+                    //LINHA DIVIDER ---
                     Divider()
                         .background(Color.gray)
+                    
+                    Spacer()
+                        .frame(height: 10)
+                    
+                    //POSTS ---
+                    VStack {
+                        HStack {
+                            ZStack {
+                                
+                                Image("storyRing")
+                                    .resizable()
+                                    .frame(width: 47, height: 47)
+                                
+                                Image("matheus")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .cornerRadius(300)
+                            }
+                            
+                            Button(action: {}) {
+                                Text("matheushpduarte")
+                                    .foregroundColor(.white)
+                                    .bold()
+                            }
+                            
+                            Spacer()
+                            
+                            Button(action: {}) {
+                                Image(systemName: "ellipsis")
+                                    .foregroundColor(.white)
+                                    .bold()
+                            }
+                        }
+                        .padding(.trailing, 5)
+                        
+                        Image("matheuspduarte")
+                            .resizable()
+                            .frame(width: 390, height: 390)
+                        
+                        Spacer()
+                            .frame(height: 15)
+                        
+                        HStack {
+                            
+                            Button(action: {}) {
+                                Image("heart")
+                                    .renderingMode(.template)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 28, height: 28)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                                .frame(width: 20)
+                            
+                            Button(action: {}) {
+                                Image("comment")
+                                    .renderingMode(.template)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 28, height: 28)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                                .frame(width: 20)
+                            
+                            Button(action: {}) {
+                                Image("share")
+                                    .renderingMode(.template)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 28, height: 28)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                            
+                            Button(action: {}) {
+                                Image("save")
+                                    .renderingMode(.template)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 28, height: 28)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .padding(.leading, 10)
+                        .padding(.trailing, 5)
+                    }
                     
                     
                 } //SCROLLVIEW PRINCIPAL ---
