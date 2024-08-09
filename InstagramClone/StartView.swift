@@ -33,6 +33,7 @@ struct StartView: View {
         .frame(width: 400, height: 800)
         .padding()
         .background(Color.black)
+        
         .ignoresSafeArea()
         
         
