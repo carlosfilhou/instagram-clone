@@ -312,7 +312,7 @@ struct ContentView: View {
                                     .renderingMode(.template)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 26, height: 26)
                                     .foregroundColor(.white)
                             }
                             
@@ -324,7 +324,7 @@ struct ContentView: View {
                                     .renderingMode(.template)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 26, height: 26)
                                     .foregroundColor(.white)
                             }
                             
@@ -336,7 +336,7 @@ struct ContentView: View {
                                     .renderingMode(.template)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 26, height: 26)
                                     .foregroundColor(.white)
                             }
                             
@@ -347,13 +347,111 @@ struct ContentView: View {
                                     .renderingMode(.template)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 26, height: 26)
                                     .foregroundColor(.white)
                             }
                         }
                         .padding(.leading, 10)
-                        .padding(.trailing, 5)
+                        .padding(.trailing, 7)
                     }
+                    
+                    Spacer()
+                        .frame(height: 12)
+                    
+                    // LIKES & COMMENTS ---
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack(spacing: 4) {
+                                Image("kayo")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .cornerRadius(300)
+                                
+                                Text("Liked by")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                
+                                Text("kayogoncalves_")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                    .bold()
+                                
+                                Text("and")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                
+                                Text("70 others")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                    .bold()
+                                
+                            }
+                            
+                            HStack(spacing: 4) {
+                                Text("kayogoncalves_")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                    .bold()
+                                
+                                Text("Um tbt. Mil amores.")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                            }
+                            
+                            Spacer()
+                                .frame(height: 7)
+                            
+                            HStack(spacing: 4) {
+                                Text("View all 5 comments")
+                                    .foregroundColor(Color(white: 0.7))
+                                    .font(.system(size: 16))
+                            }
+                            
+                            Spacer()
+                                .frame(height: 7)
+                            
+                            HStack(spacing: 4) {
+                                Text("amandaboing")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                                    .bold()
+                                
+                                Text("💘")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                            }
+                            
+                            HStack(spacing: 7) {
+                                
+                                Image("me")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .cornerRadius(300)
+                                
+                                Text("Add a comment")
+                                    .foregroundColor(Color(white: 0.5))
+                                    .font(.system(size: 16))
+                            }
+                            
+                            Spacer()
+                                .frame(height: 7)
+                            
+                            HStack(spacing: 4) {
+                                Text("29 April 2021 •")
+                                    .foregroundColor(Color(white: 0.7))
+                                    .font(.system(size: 16))
+                                
+                                Text("See Translation")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16))
+                            }
+                            
+                        }
+                        
+                        Spacer()
+                            .frame(width: 55)
+                        
+                    } // LIKES & COMMENTS ---
                     
                     
                 } //SCROLLVIEW PRINCIPAL ---
