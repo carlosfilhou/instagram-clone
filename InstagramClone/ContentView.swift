@@ -25,9 +25,13 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 1)
                 
-                Post(description: "still on the rise", imagePost: "kayo1", postPhoto: "kayo", postName: "kayogoncalves_", likeNumber: 702, commentNumber: 17, postDate: "21 December 2023")
+                Post(postPhoto: "kayo", postName: "kayogoncalves_", imagePost: "kayo1", likedPhoto: "matheus", likedName: "matheushpduarte", likeNumber: 702, description: "still on the rise", commentNumber: 17, postDate: "21 December 2023")
                 
-                Post(description: "still on the rise", imagePost: "gabriel1", postPhoto: "gabriel", postName: "gabrieldosan")
+                Post(postPhoto: "gabriel", postName: "gabrieldosan", imagePost: "gabriel1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 72, description: "A Maestria Jiu Jitsu só cresce.", commentNumber: 5, postDate: "21 November 2023")
+                
+                Post(postPhoto: "yuri", postName: "jamalkmg", imagePost: "yuri1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 274, description: "“No Nakka Club ela quer ir pro VIP!”...", commentNumber: 25, postDate: "6 days ago")
+                
+                Post(postPhoto: "matheus", postName: "matheushpduarte", imagePost: "matheus1", likedPhoto: "kayo", likedName: "kayogoncalves_", likeNumber: 71, description: "Um tbt. Mil amores.", commentNumber: 5, postDate: "29 April 2021")
                 
             } // Scrollview ---
             
@@ -224,11 +228,13 @@ struct PostContent: View {
 }
 
 struct Post: View {
-    var description = ""
-    var imagePost = ""
     var postPhoto = ""
     var postName = ""
+    var imagePost = ""
+    var likedPhoto = ""
+    var likedName = ""
     var likeNumber = 0
+    var description = ""
     var commentNumber = 0
     var postDate = ""
     
@@ -239,7 +245,7 @@ struct Post: View {
             PostContent(imagePost: imagePost)
             
             HStack(spacing: 4) {
-                Image("matheus")
+                Image(likedPhoto)
                     .resizable()
                     .frame(width: 20, height: 20)
                     .cornerRadius(300)
@@ -248,7 +254,7 @@ struct Post: View {
                     .foregroundColor(.white)
                     .font(.system(size: 16))
                 
-                Text("matheushpduarte")
+                Text(likedName)
                     .foregroundColor(.white)
                     .font(.system(size: 16))
                     .bold()
@@ -266,7 +272,7 @@ struct Post: View {
             .padding(.horizontal, 12)
             
             HStack(spacing: 4) {
-                Text("kayogoncalves_")
+                Text(postName)
                     .foregroundColor(.white)
                     .font(.system(size: 16))
                     .bold()
