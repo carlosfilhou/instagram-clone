@@ -9,35 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 0) { // spacing apenas para garantir que os espaçamentos estarão zerados entre elementos.
-            
-            ScrollView {
-                Header()
+            VStack(spacing: 0) { // spacing apenas para garantir que os espaçamentos estarão zerados entre elementos.
                 
-                Stories()
+                ScrollView {
+                    Header()
+                    
+                    Stories()
+                    
+                    Spacer()
+                        .frame(height: 1)
+                    
+                    Divider()
+                        .background(Color.gray)
+                    
+                    Spacer()
+                        .frame(height: 1)
+                    
+                    Post(postPhoto: "kayo", postName: "kayogoncalves_", imagePost: "kayo1", likedPhoto: "matheus", likedName: "matheushpduarte", likeNumber: 702, description: "still on the rise", commentNumber: 17, postDate: "21 December 2023")
+                    
+                    Post(postPhoto: "gabriel", postName: "gabrieldosan", imagePost: "gabriel1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 72, description: "A Maestria Jiu Jitsu só cresce.", commentNumber: 5, postDate: "21 November 2023")
+                    
+                    Post(postPhoto: "yuri", postName: "jamalkmg", imagePost: "yuri1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 274, description: "“No Nakka Club ela quer ir pro VIP!”...", commentNumber: 25, postDate: "6 days ago")
+                    
+                    Post(postPhoto: "matheus", postName: "matheushpduarte", imagePost: "matheus1", likedPhoto: "kayo", likedName: "kayogoncalves_", likeNumber: 71, description: "Um tbt. Mil amores.", commentNumber: 5, postDate: "29 April 2021")
+                    
+                } // Scrollview ---
                 
-                Spacer()
-                    .frame(height: 1)
+                TabBar()
                 
-                Divider()
-                    .background(Color.gray)
-                
-                Spacer()
-                    .frame(height: 1)
-                
-                Post(postPhoto: "kayo", postName: "kayogoncalves_", imagePost: "kayo1", likedPhoto: "matheus", likedName: "matheushpduarte", likeNumber: 702, description: "still on the rise", commentNumber: 17, postDate: "21 December 2023")
-                
-                Post(postPhoto: "gabriel", postName: "gabrieldosan", imagePost: "gabriel1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 72, description: "A Maestria Jiu Jitsu só cresce.", commentNumber: 5, postDate: "21 November 2023")
-                
-                Post(postPhoto: "yuri", postName: "jamalkmg", imagePost: "yuri1", likedPhoto: "joao", likedName: "jon1.santos", likeNumber: 274, description: "“No Nakka Club ela quer ir pro VIP!”...", commentNumber: 25, postDate: "6 days ago")
-                
-                Post(postPhoto: "matheus", postName: "matheushpduarte", imagePost: "matheus1", likedPhoto: "kayo", likedName: "kayogoncalves_", likeNumber: 71, description: "Um tbt. Mil amores.", commentNumber: 5, postDate: "29 April 2021")
-                
-            } // Scrollview ---
-            
-            
-        } // VStack conteúdo ---
-        .background(Color.black)
+            } // VStack conteúdo ---
+            .background(Color.black)
         
     } // Var body... ---
     
@@ -315,6 +316,59 @@ struct Post: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 5)
+            
+        }
+    }
+}
+
+struct TabBar: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            Divider()
+            
+            HStack {
+                Image("home")
+                    .renderingMode(.template)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 26, height: 26)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Image(systemName: "magnifyingglass")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Image(systemName: "plus.app")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Image("reels")
+                    .renderingMode(.template)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 26, height: 26)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Image("profile")
+                    .renderingMode(.template)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 26, height: 26)
+                    .foregroundColor(.white)
+                
+            }
+            .padding(.horizontal, 25)
+            .padding(.top, 10)
             
         }
     }

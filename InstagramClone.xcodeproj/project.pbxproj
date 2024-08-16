@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF13AF872C6FC27B00DD00BF /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13AF862C6FC27B00DD00BF /* test.swift */; };
 		DF3FE14D2C3CB72400307D81 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE14C2C3CB72400307D81 /* InstagramCloneApp.swift */; };
 		DF3FE14F2C3CB72400307D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE14E2C3CB72400307D81 /* ContentView.swift */; };
 		DF3FE1512C3CB72600307D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3FE1502C3CB72600307D81 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF13AF862C6FC27B00DD00BF /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		DF3FE1492C3CB72400307D81 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3FE14C2C3CB72400307D81 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		DF3FE14E2C3CB72400307D81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				DF3FE14E2C3CB72400307D81 /* ContentView.swift */,
 				DF3FE1502C3CB72600307D81 /* Assets.xcassets */,
 				DF3FE1522C3CB72600307D81 /* Preview Content */,
+				DF13AF862C6FC27B00DD00BF /* test.swift */,
 			);
 			path = InstagramClone;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF3FE15B2C3CBAA600307D81 /* StartView.swift in Sources */,
+				DF13AF872C6FC27B00DD00BF /* test.swift in Sources */,
 				DF3FE14F2C3CB72400307D81 /* ContentView.swift in Sources */,
 				DF3FE14D2C3CB72400307D81 /* InstagramCloneApp.swift in Sources */,
 			);
