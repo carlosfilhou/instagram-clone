@@ -27,6 +27,54 @@ struct test1: View {
                 
                 Post1()
             }
+            
+            VStack(spacing: 0) {
+                Divider()
+                
+                HStack {
+                    Image("home")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 26, height: 26)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(width: 26, height: 26)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "plus.app")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Image("reels")
+                        .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 26, height: 26)
+                        .foregroundColor(.white)
+                        
+                    Spacer()
+                    
+                    Image("profile")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 26, height: 26)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal, 25)
+                .padding(.top, 10)
+            }
+            
         }
         .background(Color.black)
     }
@@ -252,13 +300,56 @@ struct Post1: View {
                     .foregroundColor(.white)
                     .font(.system(size: 16))
                 
-                
+                Text("\(likedNumber) others")
+                    .foregroundColor(.white)
+                    .font(.system(size: 16))
+                    .bold()
             }
             .padding(.horizontal, 12)
             
             HStack(spacing: 4) {
-                Text("postName")
+                Text(postName)
+                    .foregroundColor(.white)
+                    .font(.system(size: 16))
+                    .bold()
+                
+                Text(description)
+                    .foregroundColor(.white)
+                    .font(.system(size: 16))
             }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 3)
+            
+            HStack(spacing: 4) {
+                Button(action: {}) {
+                    Text("View all \(commentNumber) comments")
+                        .foregroundColor(Color(white: 0.7))
+                        .font(.system(size: 16))
+                }
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 5)
+            
+            HStack(spacing: 7) {
+                Image("me")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .cornerRadius(300)
+                
+                Text("Add a comment...")
+                    .foregroundColor(Color(white:0.5))
+                    .font(.system(size: 16))
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 5)
+            
+            HStack(spacing: 4) {
+                Text(postDate)
+                    .foregroundColor(Color(white:0.7))
+                    .font(.system(size: 16))
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 5)
         }
     }
 }
